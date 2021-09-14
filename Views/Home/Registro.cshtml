@@ -1,0 +1,46 @@
+@model pc2Teoria.Models.Registro
+
+@{
+    ViewData["Title"] = "Registro De Adopcion";
+    
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class='green'>
+<div class="text-center">
+    <h1 class="display-4">Formulario de registro Para Adopcion</h1>
+    <form asp-controller="Home" asp-action="Registro" >
+        <input type="hidden" asp-for="Id" />
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" class="form-control form-control-sm" type="text" placeholder="Escribe un nombre" aria-label=".form-control-sm" />
+
+        <label asp-for="ApellidoPaterno" class="control-label"></label>
+        <input asp-for="ApellidoPaterno" class="form-control" placeholder="Escribe su apellido" />
+        <label asp-for="ApellidoMaterno" class="control-label"></label>
+        <input asp-for="ApellidoMaterno" class="form-control" placeholder="Escribe su apellido" />
+        <div > 
+                        <label>Tipo Mascota</label>
+                        <select asp-for="TipoMascota" class="form-select" multiple aria-label="multiple select example">
+                            <option selected>seleccion una opción</option>
+                            <option value="gato">gato</option>
+                            <option value="perro">perro</option>
+                          </select>
+        </div>
+        <label asp-for="Descripcion" class="control-label">Descripcion</label>
+        <textarea asp-for="Descripcion" class="form-control"  ></textarea>
+
+        <label asp-for="Telefono" class="control-label">Telefono</label>
+        <input asp-for="Telefono" class="form-control" />
+
+        <label asp-for="Distrito" class="control-label">Distrito</label>
+        <input asp-for="Distrito" class="form-control" />
+
+        <label asp-for="Direccion" class="control-label">Direccion</label>
+        <input asp-for="Direccion" class="form-control" />
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Registrar Adopcion</button> 
+        </div>
+    </form>
+</div>
+</div>
